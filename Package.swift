@@ -10,21 +10,13 @@ let package = Package(
         .macOS(.v10_15)
     ],
     products: [
-        .library(
-            name: "RadioBrowser",
-            targets: ["RadioBrowser"]),
+        .library(name: "RadioBrowser", targets: ["RadioBrowser"]),
     ],
     dependencies: [
-        .package(name: "SwiftyBeaver", url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", from: "1.9.5"),
+        .package(name: "SwiftyBeaver", url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", from: "1.9.0"),
     ],
     targets: [
-        .target(
-            name: "RadioBrowser",
-            dependencies: [
-                "SwiftyBeaver"
-            ],
-            path: "Sources"
-        )
+        .target(name: "RadioBrowser", dependencies: ["SwiftyBeaver"], path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
